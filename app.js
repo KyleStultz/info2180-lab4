@@ -1,6 +1,7 @@
 window.onload = function(){
-    var searchbutton = document.getElementById("btn")
+    let searchbutton = document.getElementById("btn")
     searchbutton.addEventListener ('click',function(e) {
+        
         e.preventDefault();
         var searchquery = document.getElementById("superheroes").value;
         var herorequest = new XMLHttpRequest();
@@ -16,8 +17,8 @@ window.onload = function(){
                 }
             }
         }
-        hrequest.open("GET" , urlcode, true);
-        hrequest.send();
+        herorequest.open("GET" , urlcode, true);
+        herorequest.send();
 
     });
 }
